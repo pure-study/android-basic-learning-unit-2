@@ -1,4 +1,4 @@
-package net.will.kotlinfundamentals
+package me.will.kotlinfundamentals
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

@@ -1,4 +1,4 @@
-package net.will.kotlinfundamentals
+package me.will.kotlinfundamentals
 
 open class Phone(private var isScreenLightOn: Boolean = false) {
     open fun switchOn() {

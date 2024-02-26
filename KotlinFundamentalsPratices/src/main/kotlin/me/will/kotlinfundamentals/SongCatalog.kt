@@ -1,4 +1,4 @@
-package net.will.kotlinfundamentals
+package me.will.kotlinfundamentals
 
 class Song(
     private val title: String,

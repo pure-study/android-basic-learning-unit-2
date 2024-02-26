@@ -1,4 +1,4 @@
-package net.will.kotlinfundamentals
+package me.will.kotlinfundamentals
 
 fun main() {
     printFinalTemperature(27.0, "Celsius", "Fahrenheit") { 9 * it / 5 + 32 }

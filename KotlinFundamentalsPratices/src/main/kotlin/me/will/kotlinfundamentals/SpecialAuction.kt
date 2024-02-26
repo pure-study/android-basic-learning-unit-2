@@ -1,4 +1,4 @@
-package net.will.kotlinfundamentals
+package me.will.kotlinfundamentals
 
 fun main() {
     // this main() turns to be unnecessary with UTs existing

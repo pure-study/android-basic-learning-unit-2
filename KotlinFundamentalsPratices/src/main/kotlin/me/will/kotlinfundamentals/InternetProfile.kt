@@ -1,4 +1,4 @@
-package net.will.kotlinfundamentals
+package me.will.kotlinfundamentals
 
 fun main() {
     val amanda = Person("Amanda", 33, "play tennis")

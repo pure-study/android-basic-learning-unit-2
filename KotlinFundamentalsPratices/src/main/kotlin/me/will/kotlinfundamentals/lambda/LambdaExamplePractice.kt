@@ -1,4 +1,4 @@
-package net.will.kotlinfundamentals.lambda
+package me.will.kotlinfundamentals.lambda
 
 fun main() {
     val treatFunction = trickOrTreat(false) { "$it quarters" }
