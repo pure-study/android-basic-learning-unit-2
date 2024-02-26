@@ -1,4 +1,4 @@
-package net.will.smarthomeapp
+package me.will.smarthomeapp
 
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
