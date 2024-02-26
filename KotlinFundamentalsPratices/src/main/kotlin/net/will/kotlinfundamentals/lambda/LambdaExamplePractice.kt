@@ -2,6 +2,8 @@ package net.will.kotlinfundamentals.lambda
 
 fun main() {
     val treatFunction = trickOrTreat(false) { "$it quarters" }
+    println("See what's output as of now.")
+
     val trickFunction = trickOrTreat(true, null)
     repeat(4) {
         println(it)
@@ -11,13 +13,13 @@ fun main() {
 }
 
 fun trickOrTreat(isTrick: Boolean, extraTreat: ((Int) -> String)?): () -> Unit {
-    if (isTrick) {
-        return trick
+    return if (isTrick) {
+        trick
     } else {
         if (extraTreat != null) {
-            println(extraTreat(5))
+            println(extraTreat(5))  // this line actually not executed for multiple times
         }
-        return treat
+        treat
     }
 }
 
