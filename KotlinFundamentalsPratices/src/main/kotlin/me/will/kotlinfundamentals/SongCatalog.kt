@@ -9,18 +9,11 @@ class Song(
     val isPolular: Boolean
         get() = playCount >= 1000
 
-    fun printDescripition() {
-        println("[$title], performed by [$artist], was released in [$yearPublished].")
+    fun description(): String {
+        return "[$title], performed by [$artist], was released in [$yearPublished]."
     }
-}
 
-fun main() {
-    val fireworks = Song("Fireworks", "Katy Perry", "2013")
-    fireworks.playCount++
-    fireworks.playCount++
-    fireworks.printDescripition()
-    println("Play Count: ${fireworks.playCount}, isPolular: ${fireworks.isPolular}")
-
-    fireworks.playCount += 1000
-    println("Play Count: ${fireworks.playCount}, isPolular: ${fireworks.isPolular}")
+    fun printDescripition() {
+        println(description())
+    }
 }

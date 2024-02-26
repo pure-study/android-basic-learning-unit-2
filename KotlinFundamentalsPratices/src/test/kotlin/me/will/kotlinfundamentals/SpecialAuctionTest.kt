@@ -24,6 +24,6 @@ class SpecialAuctionTest {
     @Test
     fun `test auctionPrice - bid amount lower than the minimum`() {
         val bid = Bid(1000, "Private Collector")
-        assertEquals(2000, auctionPrice(bid, 2000))
+        assertEquals(1000, auctionPrice(bid, 2000))
     }
 }

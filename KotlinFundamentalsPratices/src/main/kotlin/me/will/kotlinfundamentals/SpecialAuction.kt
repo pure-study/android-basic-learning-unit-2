@@ -11,6 +11,5 @@ fun main() {
 class Bid(val amount: Int, val bidder: String)
 
 fun auctionPrice(bid: Bid?, minimumPrice: Int): Int {
-    val bidAmount = bid?.amount ?: 0
-    return if (bidAmount > minimumPrice) bidAmount else minimumPrice
+    return bid?.amount ?: minimumPrice
 }
