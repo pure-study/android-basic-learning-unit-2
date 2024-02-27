@@ -27,7 +27,7 @@ class Person(
         println()
     }
 
-    private fun referrerInfo(): String {
+    fun referrerInfo(): String {
         var finalInfo = ""
         if (referrer != null) {
             finalInfo += "Has a referrer named ${referrer.name}"
