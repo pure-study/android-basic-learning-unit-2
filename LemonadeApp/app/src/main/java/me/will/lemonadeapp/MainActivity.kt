@@ -84,15 +84,17 @@ fun TitleBar(modifier: Modifier = Modifier) {
 @Composable
 fun MainPane(modifier: Modifier = Modifier) {
     var maxClickOfSqueeze by remember {
-        mutableIntStateOf((1..5).random())
+        mutableIntStateOf(0)
     }
-    val lemonTreeCard = LemonadeCardContent(R.drawable.lemon_tree, R.string.lemon_tree, R.string.select_a_lemon) { 2 }
+    val lemonTreeCard = LemonadeCardContent(R.drawable.lemon_tree, R.string.lemon_tree, R.string.select_a_lemon) {
+        maxClickOfSqueeze = Random(System.currentTimeMillis()).nextInt(1, 5)
+        2
+    }
     val lemonSqueezeCard = LemonadeCardContent(R.drawable.lemon_squeeze, R.string.lemon, R.string.squeeze_lemon) {
         maxClickOfSqueeze--
         if (maxClickOfSqueeze > 0) {
             2
         } else {
-            maxClickOfSqueeze = Random(System.currentTimeMillis()).nextInt(1, 5)
             3
         }
     }
