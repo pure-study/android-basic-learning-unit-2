@@ -86,8 +86,8 @@ fun MainPane(modifier: Modifier = Modifier) {
     var maxClickOfSqueeze by remember {
         mutableIntStateOf((1..5).random())
     }
-    val lemonTreeCard = LemonadeCardContent(R.drawable.lemon_tree, "lemon tree", R.string.select_a_lemon) { 2 }
-    val lemonSqueezeCard = LemonadeCardContent(R.drawable.lemon_squeeze, "lemon squeeze", R.string.squeeze_lemon) {
+    val lemonTreeCard = LemonadeCardContent(R.drawable.lemon_tree, R.string.lemon_tree, R.string.select_a_lemon) { 2 }
+    val lemonSqueezeCard = LemonadeCardContent(R.drawable.lemon_squeeze, R.string.lemon, R.string.squeeze_lemon) {
         maxClickOfSqueeze--
         if (maxClickOfSqueeze > 0) {
             2
@@ -96,8 +96,8 @@ fun MainPane(modifier: Modifier = Modifier) {
             3
         }
     }
-    val lemonDrinkCard = LemonadeCardContent(R.drawable.lemon_drink, "lemon drink", R.string.drink_lemon) { 4 }
-    val lemonRestartCard = LemonadeCardContent(R.drawable.lemon_restart, "lemon restart", R.string.start_again) { 1 }
+    val lemonDrinkCard = LemonadeCardContent(R.drawable.lemon_drink, R.string.glass_of_lemonade, R.string.drink_lemon) { 4 }
+    val lemonRestartCard = LemonadeCardContent(R.drawable.lemon_restart, R.string.empty_glass, R.string.start_again) { 1 }
     var cardIndex by remember {
         mutableIntStateOf(1)
     }
@@ -119,7 +119,7 @@ fun MainPane(modifier: Modifier = Modifier) {
         ) {
             Image(
                 painter = painterResource(id = cardContent.imgId),
-                contentDescription = cardContent.imgDescription
+                contentDescription = stringResource(id = cardContent.imgDescId)
             )
         }
         Text(
@@ -132,7 +132,7 @@ fun MainPane(modifier: Modifier = Modifier) {
 
 class LemonadeCardContent(
     val imgId: Int,
-    val imgDescription: String,
+    val imgDescId: Int,
     val promptTextId: Int,
     val next: () -> Int
 )
