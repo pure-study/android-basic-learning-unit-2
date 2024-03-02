@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Art Space</string>
+    <string name="artwork_01_title">Artwork 01 Title</string>
+    <string name="artist_01_desc">Artist 01 (%s)</string>
+    <string name="artwork_02_title">Artwork 02 Title</string>
+    <string name="artist_02_desc">Artist 02 (%s)</string>
+    <string name="artwork_03_title">Artwork 03 Title</string>
+    <string name="artist_03_desc">Artist 03 (%s)</string>
+    <string name="artwork_04_title">Artwork 04 Title</string>
+    <string name="artist_04_desc">Artist 04 (%s)</string>
+    <string name="btn_previous">Previous</string>
+    <string name="btn_next">Next</string>
+</resources>
